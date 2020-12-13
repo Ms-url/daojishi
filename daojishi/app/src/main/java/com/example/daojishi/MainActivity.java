@@ -2,6 +2,7 @@ package com.example.daojishi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -29,6 +30,15 @@ public class MainActivity extends AppCompatActivity implements Runnable{
         bt_boom=findViewById(R.id.bt_boom);
         t1=findViewById(R.id.A2_textView_l);
         t3=findViewById(R.id.A2_textView_shang);
+
+        Button button=findViewById(R.id.M_button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,second.class);
+                startActivity(intent);
+            }
+        });
 
         mainHandler=new Handler(){
             @Override
